@@ -4,13 +4,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: touch hello.txt
-      - run: ls
       - name: Check out repository code
         uses: actions/checkout@v2
+      - run: touch hello.txt
       - run: |
           ls ${{ github.workspace }}
-      - run: ls
-      - run: pwd
-      - run: echo ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: ls -lah
+      - run: echo "JOB STATUS - ${{ job.status }}."
