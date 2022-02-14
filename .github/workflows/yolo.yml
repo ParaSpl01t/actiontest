@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo $(date +%s) > hi.txt
-      - run: ls -lah
+      - run: bash build.sh
       - run: git config user.email "tushar10141@gmail.com"
       - run: git config user.name "ParaSpl01t"
       - run: git add .
